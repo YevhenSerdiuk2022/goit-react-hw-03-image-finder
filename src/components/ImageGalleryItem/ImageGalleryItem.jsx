@@ -1,4 +1,5 @@
-import {Li, Img} from './ImageGalleryItem.styled'
+import PropTypes from 'prop-types';
+import { Li, Img } from './ImageGalleryItem.styled'
 
 
  export const ImageGalleryItem = ({item, openModal}) => {
@@ -13,3 +14,13 @@ import {Li, Img} from './ImageGalleryItem.styled'
   );
 };
    
+ImageGalleryItem.propTypes = {
+  item: PropTypes.arrayOf(
+    PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+    }),
+       
+  ),
+  openModal: PropTypes.func.isRequired,
+};

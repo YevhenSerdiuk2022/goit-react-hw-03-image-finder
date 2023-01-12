@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import errorImage from '../../images/images.jpg';
 import { Div } from './ImageErrorView.styled';
 
@@ -9,3 +10,7 @@ export default function ImageErrorView({ message }) {
         </Div>
     );
 }
+
+ImageErrorView.propTypes = {
+    message: PropTypes.string.isRequired,
+};

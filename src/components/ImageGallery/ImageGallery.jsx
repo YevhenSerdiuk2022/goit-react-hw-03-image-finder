@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from "react";
 import { Ul } from './ImageGallery.styled';
 import { ImageGalleryItem } from "components/ImageGalleryItem/ImageGalleryItem";
@@ -129,4 +130,12 @@ export default class ImageGallery extends Component {
         
        
     }
+}
+
+ImageGallery.propTypes = {
+    images: PropTypes.arrayOf(
+        PropTypes.shape({
+           item:PropTypes.arrayOf 
+        })
+    )
 }

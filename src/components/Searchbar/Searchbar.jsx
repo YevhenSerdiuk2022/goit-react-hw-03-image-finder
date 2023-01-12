@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { ImSearch } from 'react-icons/im';
 import { Header, SearchForm, SearchFormInput, StyledBtn } from "./Searchbar.styled";
@@ -5,6 +6,9 @@ import { toast } from 'react-toastify';
 
 
 export default class Searchbar extends Component {
+    static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
     state = {
         searchQuery: '',
 
